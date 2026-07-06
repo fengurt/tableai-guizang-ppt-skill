@@ -1241,24 +1241,28 @@
      - canvas-card 内首位插入 <canvas class="ascii-bg" aria-hidden="true">,本文件底部 IIFE 自动启动
      - 主标题反白 weight 200,强调字用斜体而非 var(--accent)(底已是蓝,蓝压蓝看不见)
      - 不要再放编号大字"01"——chrome-min 已经标 01/NN -->
-<section class="slide accent" data-animate="hero">
+<!-- ============================================================
+     SLIDES_HERE · Style B 演示 deck · NorthStar Analytics · Q3 Field Note
+     24 页覆盖 references/layouts-swiss.md 全部 22 个版式 (S01-S22) + Cover + Closing.
+     主题色: 默认 IKB 克莱因蓝 (themes-swiss.md)
+     真实使用时,直接替换文案和数字即可.
+     ============================================================ -->
+
+<!-- ============ Cover · IKB 满屏 + ASCII 呼吸场(等同 P1 风格版,作为 deck 起手) ============ -->
+<section class="slide accent" data-animate="hero" data-layout="SWISS-COVER-ASCII">
   <div class="canvas-card">
     <canvas class="ascii-bg" aria-hidden="true"></canvas>
     <div class="chrome-min">
-      <div class="l">[必填] Deck 标题 · Issue/Field Note 编号</div>
-      <div class="r">SS · 25.05.10 · 01 / NN</div>
+      <div class="l">NorthStar · Q3 Field Note 03</div>
+      <div class="r">SS · 26.10.07 · 01 / NN</div>
     </div>
-
-    <!-- 主体:padding 必须为 0,不要再叠 5vw,否则左右对不齐 chrome-min -->
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2.6vh">
-      <div data-anim="kicker" class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em">[必填] 章节英文 / Section En</div>
-
-      <h1 data-anim="title" style="align-self:center;font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(11.6vw,19vh);line-height:.94;letter-spacing:-.025em;color:#fff">[必填] 中文主标题<br/>(≤ 12 字,可在某字加 <span style="font-style:italic;font-weight:300">italic</span> 微强调)</h1>
-
+      <div data-anim="kicker" class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em">Q3 · How we grew 41%</div>
+      <h1 data-anim="title" style="align-self:center;font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(11.6vw,19vh);line-height:.94;letter-spacing:-.025em;color:#fff">如何在一个<br/>被宣判死亡的市场<br/><span style="font-style:italic;font-weight:300">长出 41%</span>。</h1>
       <div data-anim="bottom" style="display:grid;grid-template-rows:auto auto;gap:1.6vh;border-top:1px solid rgba(255,255,255,.22);padding-top:2vh">
-        <div data-anim="lead" class="lead" style="max-width:52ch;color:rgba(255,255,255,.86);font-weight:300">[必填] 一段 1-2 行的副标 / 引子,定调全场.</div>
+        <div data-anim="lead" class="lead" style="max-width:52ch;color:rgba(255,255,255,.86);font-weight:300">一份给同行看的 Q3 内部复盘 ── 不是 PR 稿,不是公关文章,是一家 B2B SaaS 用 90 天把 ARR 从 $29.1M 做到 $41.2M 的真实路径。</div>
         <div style="display:flex;justify-content:space-between;align-items:end">
-          <div class="t-meta" style="color:rgba(255,255,255,.6)">[选填] 作者 · 日期 · 出处</div>
+          <div class="t-meta" style="color:rgba(255,255,255,.6)">歸藏 · NorthStar 团队</div>
           <div class="t-meta" style="color:rgba(255,255,255,.6)">→ swipe / arrow keys</div>
         </div>
       </div>
@@ -1266,64 +1270,955 @@
   </div>
 </section>
 
-<!-- ============ 示例:最后一页 · Closing Manifesto · 左 IKB+ASCII / 右白底 takeaway ============
-     与封面 IKB 首尾呼应,但收束更克制:左半保留 ASCII 呼吸场承载宣言,右半白底列 3 条 takeaway.
-     第 03 条用 var(--accent) IKB 蓝强调("单一锚点"原则),首尾形成"色彩闭环". -->
-<section class="slide split" data-animate="split-statement">
+<!-- ============ S02 · Vertical Timeline · Q3 三个关键里程碑 ============ -->
+<section class="slide" data-animate="progression" data-layout="S02">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Methodology · 03 checkpoints</div>
+      <div class="r">S02 · 02 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">METHODOLOGY · 03</div>
+        <h2 class="h-xl-zh" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.8vw,10.2vh);line-height:1.05">Q3 三个数字</h2>
+        <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(13px,1vw);line-height:1.6;opacity:.78;max-width:48ch;margin-top:1vh">从 1× 到 1.6×,9 月的 NRR 跳到了 138%。三组倍数的故事。</p>
+      </div>
+      <div class="timeline-v" data-anim="up">
+        <div class="tl-node">
+          <div class="tl-axis"><span class="dot"></span></div>
+          <div class="tl-body">
+            <span class="yr">2026.07</span>
+            <span class="multi">1<small>×</small></span>
+            <p class="desc">PLG 模式的极限</p>
+          </div>
+        </div>
+        <div class="tl-node accent">
+          <div class="tl-axis"><span class="dot"></span></div>
+          <div class="tl-body">
+            <span class="yr">2026.08</span>
+            <span class="multi">1.2<small>×</small></span>
+            <p class="desc">团队重组 · Hybrid GTM</p>
+          </div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-axis"><span class="dot"></span></div>
+          <div class="tl-body">
+            <span class="yr">2026.09</span>
+            <span class="multi">1.6<small>×</small></span>
+            <p class="desc">复盘当天 NRR 138%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S03 · Split Statement · 关于"不是 PLG" ============ -->
+<section class="slide split" data-layout="S03" data-animate="statement">
   <div class="canvas-card">
     <div class="split-half">
-      <!-- 左半 · IKB 宣言 + ASCII 呼吸场 -->
       <div class="half b-accent" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between;position:relative;overflow:hidden">
         <canvas class="ascii-bg" aria-hidden="true"></canvas>
         <div class="chrome-min" style="margin-bottom:0;position:relative;z-index:1">
-          <div class="l">NN / NN</div>
-          <div class="r">CLOSING</div>
+          <div class="l">TWIST</div>
+          <div class="r">S03</div>
         </div>
-
-        <div data-anim="manifesto" style="display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
-          <div class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em;margin-bottom:1.6vh">MANIFESTO</div>
-          <h2 style="font-family:var(--sans),var(--sans-zh);font-size:min(8vw,14vh);line-height:.94;letter-spacing:-.025em;font-weight:200;color:#fff">[必填] Build a model.<br/>Run <span style="font-style:italic;font-weight:300">forever</span>.</h2>
-          <div style="font-family:var(--sans),var(--sans-zh);font-size:max(13px,1vw);line-height:1.6;color:rgba(255,255,255,.82);font-weight:300;max-width:36ch;margin-top:1.4vh">[必填] 一句 1-2 行的中文/英文注脚,把宣言落地.</div>
+        <div data-anim="manifesto" style="display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1;align-self:center">
+          <div class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em;margin-bottom:1.6vh">THE TWIST</div>
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-size:min(8vw,14vh);line-height:.94;letter-spacing:-.025em;font-weight:200;color:#fff">我们<br/>不是 <span style="font-style:italic;font-weight:300">PLG</span>。</h2>
         </div>
-
         <div data-anim="signature" style="display:flex;justify-content:space-between;align-items:end;border-top:1px solid rgba(255,255,255,.22);padding-top:2vh;position:relative;z-index:1">
-          <div class="t-meta" style="color:rgba(255,255,255,.62)">[选填] 作者 · 头衔</div>
-          <div class="t-meta" style="color:rgba(255,255,255,.62)">YY.MM.DD</div>
+          <div class="t-meta" style="color:rgba(255,255,255,.62)">Act I · 转折</div>
+          <div class="t-meta" style="color:rgba(255,255,255,.62)">26.08.04</div>
         </div>
       </div>
+      <div class="half" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between">
+        <div style="display:flex;flex-direction:column;gap:3vh">
+          <div class="t-meta">CONTEXT</div>
+          <p style="font-family:var(--sans),var(--sans-zh);font-size:max(18px,1.5vw);line-height:1.55;font-weight:300">整个 Q2 我们都被劝去做 product-led growth。Q3 我们回到 enterprise sales ── 三个月招了 12 个 SDR,ARR 直接起飞。</p>
+          <div class="callout">
+            你不需要 PLG 还是 SLG 的辩论,你需要 fit-product-customer 的勇气。
+            <div class="callout-src">— 内部 Slack #exec-room · 26.08</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- 右半 · 三条 takeaway · 白底承载理性收束 -->
+<!-- ============ S04 · Six Cells · 六个增长杠杆 ============ -->
+<section class="slide" data-layout="S04" data-animate="grid-reveal">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Six Levers · 增长的六根杠杆</div>
+      <div class="r">S04 · 04 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">GROWTH · 6 LEVERS</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">Q3 的六个杠杆</h2>
+        <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(13px,.95vw);line-height:1.55;opacity:.72;max-width:48ch">没有任何一根单独够用,但只要缺一根,其他都失效。</p>
+      </div>
+      <div class="sub-grid-3-2" data-anim="up">
+        <div class="sub-card">
+          <i data-lucide="search"></i>
+          <span class="nb-corner">01 / SDR</span>
+          <h4>Outbound</h4>
+          <p>冷邮件 + 冷电话双通道</p>
+        </div>
+        <div class="sub-card">
+          <i data-lucide="message-square"></i>
+          <span class="nb-corner">02 / DEMO</span>
+          <h4>Vertical Demo</h4>
+          <p>30 分钟按行业定制</p>
+        </div>
+        <div class="sub-card">
+          <i data-lucide="play-circle"></i>
+          <span class="nb-corner">03 / PILOT</span>
+          <h4>2-week Pilot</h4>
+          <p>集成试运行承诺</p>
+        </div>
+        <div class="sub-card">
+          <i data-lucide="file-signature"></i>
+          <span class="nb-corner">04 / CLOSE</span>
+          <h4>Legal Stack</h4>
+          <p>MSA + DPA + SLA 三件套</p>
+        </div>
+        <div class="sub-card">
+          <i data-lucide="rocket"></i>
+          <span class="nb-corner">05 / ONBOARD</span>
+          <h4>90-day Plan</h4>
+          <p>每个新客户都有 90 天启动计划</p>
+        </div>
+        <div class="sub-card">
+          <i data-lucide="refresh-ccw"></i>
+          <span class="nb-corner">06 / EXPAND</span>
+          <h4>Cross-BU</h4>
+          <p>横向推广到其他 BU</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S05 · Three Layers · 三层架构 (核心流程) ============ -->
+<section class="slide" data-layout="S05" data-animate="stack-build">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Three Layers · 三层架构</div>
+      <div class="r">S05 · 05 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">ARCHITECTURE · 03 LAYERS</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">三件事,三个团队</h2>
+      </div>
+      <div class="stack-row" data-anim="up">
+        <div class="stack-block b-accent">
+          <span class="layer-nb">LAYER 01 · THIN</span>
+          <div class="layer-icon"><svg viewBox="0 0 32 32"><circle class="stroke" cx="16" cy="16" r="13"/><circle class="stroke" cx="16" cy="16" r="6"/></svg></div>
+          <h4 class="layer-ttl">PLG<br/>自助漏斗</h4>
+          <p class="layer-desc">SMB 自助,免费 tier 持续扩张。每月 800 个新增自注册,转付费率 4.2%。</p>
+          <span class="layer-tag">CHANNEL · SMB</span>
+        </div>
+        <div class="stack-block b-grey">
+          <span class="layer-nb">LAYER 02 · MIDDLE</span>
+          <div class="layer-icon"><svg viewBox="0 0 32 32"><rect class="stroke" x="6" y="6" width="20" height="20"/></svg></div>
+          <h4 class="layer-ttl">Inside<br/>Sales</h4>
+          <p class="layer-desc">Mid-market 由 SDR + AE 闭环。每个 ARR $50K–$500K 的客户有专门的 SC 跟单。转化率 18%。</p>
+          <span class="layer-tag">CHANNEL · MID</span>
+        </div>
+        <div class="stack-block b-ink">
+          <span class="layer-nb">LAYER 03 · FAT</span>
+          <div class="layer-icon"><svg viewBox="0 0 32 32"><path class="stroke" d="M6 16 L26 16 M16 6 L16 26"/></svg></div>
+          <h4 class="layer-ttl">Enterprise<br/>Field Sales</h4>
+          <p class="layer-desc">企业级由 7 个 AE + 3 个 SE 跑。每个 ARR $500K+ 都有专属解决方案架构师跟单。Demo-to-close 11 周。</p>
+          <span class="layer-tag">CHANNEL · ENT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S06 · KPI Tower · 4 项 KPI 不等高柱状图 ============ -->
+<section class="slide" data-layout="S06" data-animate="measure-up">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Q3 KPI Tower · 关键数据可视化</div>
+      <div class="r">S06 · 06 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-columns:6fr 10fr;gap:3vw">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh;align-self:end;padding-bottom:1vh">
+        <div class="t-meta">Q3 · BREAKTHROUGH</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.4vw,9.6vh);line-height:1;letter-spacing:-.035em">四个关键数</h2>
+        <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(13px,.95vw);line-height:1.55;opacity:.72;max-width:36ch;margin-top:1vh">半年内只有这四个数被 CEO 天天看。其他都是被这四个数驱动的二次指标。</p>
+      </div>
+      <div class="bar-towers" data-anim="up">
+        <div class="bar-tower">
+          <div class="cap"><svg viewBox="0 0 24 24"><path d="M3 17 L9 11 L15 13 L21 7" /></svg></div>
+          <div class="body-block h-4 b-accent">
+            <span class="lbl">Q3 ARR</span>
+            <span class="nb">$41.2<small class="unit">M</small></span>
+            <p class="sub">环比 +41%,历史最高</p>
+          </div>
+        </div>
+        <div class="bar-tower">
+          <div class="cap"><svg viewBox="0 0 24 24"><path d="M12 2 L15 9 L22 9 L17 14 L19 21 L12 17 L5 21 L7 14 L2 9 L9 9 Z" /></svg></div>
+          <div class="body-block h-3">
+            <span class="lbl">Enterprise NRR</span>
+            <span class="nb">138<small class="unit">%</small></span>
+            <p class="sub">高于警戒线 120%</p>
+          </div>
+        </div>
+        <div class="bar-tower">
+          <div class="cap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3 L12 12 L19 12" /></svg></div>
+          <div class="body-block h-2">
+            <span class="lbl">CAC Payback</span>
+            <span class="nb">11.4<small class="unit">mo</small></span>
+            <p class="sub">比 Q1 缩短 4 个月</p>
+          </div>
+        </div>
+        <div class="bar-tower">
+          <div class="cap"><svg viewBox="0 0 24 24"><path d="M3 12 L21 12" /><path d="M12 3 L12 21" /></svg></div>
+          <div class="body-block h-1">
+            <span class="lbl">Logo Churn</span>
+            <span class="nb">0.8<small class="unit">%</small></span>
+            <p class="sub">11 个月最低</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S07 · H-Bar Chart · NRR 按客户细分 ============ -->
+<section class="slide" data-layout="S07" data-animate="bar-grow">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">NRR by Segment · 客户细分净留存</div>
+      <div class="r">S07 · 07 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">NRR · BY SEGMENT</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">谁是最忠诚的</h2>
+        <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(13px,.95vw);line-height:1.55;opacity:.72;max-width:48ch">Enterprise 段的 NRR 比 SMB 高 42 个点 ── 这就是我们重投 enterprise sales 的数据依据。</p>
+      </div>
+      <div class="h-bar-chart" data-anim="up">
+        <div class="row-lbl">Enterprise</div>
+        <div class="row-track"><div class="row-fill accent" style="--w:92%"></div></div>
+        <div class="row-val">138<small class="unit">%</small></div>
+        <div class="row-lbl">Mid-market</div>
+        <div class="row-track"><div class="row-fill accent" style="--w:82%"></div></div>
+        <div class="row-val">124<small class="unit">%</small></div>
+        <div class="row-lbl">SMB</div>
+        <div class="row-track"><div class="row-fill" style="--w:64%"></div></div>
+        <div class="row-val">96<small class="unit">%</small></div>
+        <div class="row-lbl">Self-serve</div>
+        <div class="row-track"><div class="row-fill grey" style="--w:55%"></div></div>
+        <div class="row-val">82<small class="unit">%</small></div>
+        <div class="row-lbl">Trial</div>
+        <div class="row-track"><div class="row-fill grey" style="--w:35%"></div></div>
+        <div class="row-val">52<small class="unit">%</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S08 · Duo Compare · 旧 GTM vs 新 Hybrid GTM ============ -->
+<section class="slide" data-layout="S08" data-animate="duo-mirror">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Duo Compare · Q2 vs Q3 GTM</div>
+      <div class="r">S08 · 08 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">BEFORE / AFTER · GTM SHIFT</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">范式转变</h2>
+      </div>
+      <div class="duo-compare" data-anim="up">
+        <div class="col">
+          <div class="col-tag"><span class="num">Q2</span>PURE PLG</div>
+          <h3 class="col-ttl">所有流量<br/>从产品自注册</h3>
+          <p class="col-desc">Sales 只接 inbound SQL,中层 Mid-market 无人跟,Enterprise 被推荐"自助"。</p>
+          <ul class="col-list">
+            <li>只有 PLG 通道</li>
+            <li>Sales 接 inbound</li>
+            <li>Mid-market 真空</li>
+            <li>Enterprise 长周期无人跟</li>
+          </ul>
+        </div>
+        <span class="vrule"></span>
+        <div class="col accent">
+          <div class="col-tag"><span class="num">Q3</span>HYBRID GTM</div>
+          <h3 class="col-ttl">PLG · SDR · Field<br/>三轨并行</h3>
+          <p class="col-desc">PLG 继续服务 SMB,SDR 团队打 Enterprise,SC 团队服务 Mid-market,月度合并复盘。</p>
+          <ul class="col-list">
+            <li>三轨并行</li>
+            <li>每段各配专属团队</li>
+            <li>月度合并复盘</li>
+            <li>客户旅程整体优化</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S10 · Dot Matrix Statement · 章节切换 ============ -->
+<section class="slide" data-animate="matrix-statement" data-layout="S10">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Act Divider · 转向数字</div>
+      <div class="r">S10 · 09 / NN</div>
+    </header>
+    <span class="ring-mat" style="left:5vw;bottom:5vh;width:18vw;height:18vw;position:absolute"></span>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1">
+      <h1 class="h-statement" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(7vw,12vh);line-height:.94;letter-spacing:-.04em;max-width:80vw">
+        Build a thin harness.<br>Write fat skills.<br>Codify everything.
+      </h1>
+    </div>
+    <span class="dot-mat lg" style="right:0;top:0;width:36vw;height:36vw;position:absolute;color:currentColor;opacity:.5"></span>
+    <div class="t-meta" style="color:var(--text-helper);margin-top:auto;text-align:right">— Statement 09 / 26</div>
+  </div>
+</section>
+
+<!-- ============ S11 · Horizontal Timeline · 8 周时间轴 ============ -->
+<section class="slide" data-layout="S11" data-animate="timeline-walk">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">8-week Cadence · Q3 8 周节奏</div>
+      <div class="r">S11 · 10 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:5vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">CADENCE · 8 WEEKS</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">一个季度的节奏</h2>
+      </div>
+      <div class="timeline-h" data-anim="up">
+        <div class="tl-row">
+          <div class="th-node accent up">
+            <span class="dot"></span>
+            <span class="label">
+              <span class="yr">WEEK 01</span>
+              <span class="name">Audit</span>
+              <span class="desc">复盘 Q2 流程</span>
+            </span>
+          </div>
+          <div class="th-node up">
+            <span class="dot"></span>
+            <span class="label">
+              <span class="yr">WEEK 02</span>
+              <span class="name">Hire</span>
+              <span class="desc">12 个 SDR</span>
+            </span>
+          </div>
+          <div class="th-node down">
+            <span class="dot"></span>
+            <span class="label">
+              <span class="yr">WEEK 03-04</span>
+              <span class="name">Train</span>
+              <span class="desc">行业垂直 demo</span>
+            </span>
+          </div>
+          <div class="th-node up">
+            <span class="dot"></span>
+            <span class="label">
+              <span class="yr">WEEK 05-06</span>
+              <span class="name">Pilot</span>
+              <span class="desc">5 家 enterprise</span>
+            </span>
+          </div>
+          <div class="th-node accent down">
+            <span class="dot"></span>
+            <span class="label">
+              <span class="yr">WEEK 07-08</span>
+              <span class="name">Scale</span>
+              <span class="desc">复制流程</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="t-meta" style="color:var(--text-helper)">8-week sprint · 2026.07.07 — 2026.09.05</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S12 · Manifesto + Ink Banner ============ -->
+<section class="slide" data-layout="S12" data-animate="manifesto">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Manifesto · 中段收束</div>
+      <div class="r">S12 · 11 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:0">
+      <div data-anim="line" class="manifesto-top" style="display:grid;grid-template-columns:auto 1fr;gap:5vw;align-items:flex-start;flex:1">
+        <div class="t-meta" style="color:var(--accent)">PHASE 02 · 方法论</div>
+        <div>
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(7vw,12vh);line-height:.94;letter-spacing:-.04em;margin-bottom:2vh">Fits beat funnels.<br/>Curiosity beats leads.<br/>Trust beats velocity.</h2>
+          <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(15px,1.2vw);line-height:1.55;opacity:.78;max-width:46ch">过去十年 SaaS 信奉的 PLG 是漏斗思维。客户不是在漏斗里滑落,客户是在地图上行走 ── 你需要 fit,而非 funnel。</p>
+        </div>
+      </div>
+      <div class="ink-banner-full" data-anim="up" style="margin:0 -5vw -4.4vh;background:var(--ink);color:var(--paper);padding:5vh 5vw;display:grid;grid-template-columns:1fr auto;gap:3vw;align-items:center">
+        <div>
+          <div class="t-meta" style="color:rgba(255,255,255,.78);margin-bottom:1.4vh;letter-spacing:.22em">FORM & FOUND · 26.Q3</div>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:min(3.6vw,6.4vh);line-height:1.1;letter-spacing:-.02em;color:var(--paper)">把每一个 metric,<br>配上一个团队。</h3>
+        </div>
+        <div style="display:flex;gap:2vw;align-items:center;color:rgba(255,255,255,.78)">
+          <i data-lucide="layers" style="width:2.4vw;height:2.4vw"></i>
+          <i data-lucide="users" style="width:2.4vw;height:2.4vw"></i>
+          <i data-lucide="trending-up" style="width:2.4vw;height:2.4vw"></i>
+          <i data-lucide="anchor" style="width:2.4vw;height:2.4vw"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S13 · Three Forces Cards · 三个深化的对等概念 ============ -->
+<section class="slide" data-layout="S13" data-animate="three-forces">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Three Forces · Q3 三个核心洞察</div>
+      <div class="r">S13 · 12 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-columns:5fr 11fr;gap:3vw">
+      <div class="hero-ink-col" style="background:var(--ink);color:var(--paper);padding:3.6vh 2.4vw;display:flex;flex-direction:column;gap:2vh;position:relative">
+        <div class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em">THREE FORCES</div>
+        <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.6vw,6.4vh);line-height:1.1;letter-spacing:-.02em">三个数,三次认知</h3>
+        <span class="dot-mat dense" style="position:absolute;bottom:3vh;right:1.6vw;width:8vw;height:8vw"></span>
+      </div>
+      <div class="three-forces" data-anim="up" style="display:flex;flex-direction:column;gap:1.4vh">
+        <article class="card-fill force-card">
+          <span class="force-num" style="color:var(--accent)">01</span>
+          <h4>Hybrid ≠ Contradiction</h4>
+          <p>PLG + Sales 看似对立,实则服务不同客户形状。混搭不是妥协,是适配。</p>
+        </article>
+        <article class="card-fill force-card">
+          <span class="force-num" style="color:var(--accent)">02</span>
+          <h4>Trust > Velocity</h4>
+          <p>客户不需要你跑得快,他们需要你跑得稳。Trust 让 velocity 自然发生。</p>
+        </article>
+        <article class="card-fill force-card">
+          <span class="force-num" style="color:var(--accent)">03</span>
+          <h4>Codify > Imitate</h4>
+          <p>把每一次胜利写下来,把每一次失败记成 SOP。复利来自体系,不是灵感。</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S14 · Loop Diagram · 自学闭环 ============ -->
+<section class="slide" data-layout="S14" data-animate="loop-form">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Loop · Q3 增长闭环</div>
+      <div class="r">S14 · 13 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-columns:5fr 11fr;gap:3vw">
+      <div style="display:flex;flex-direction:column;gap:2.4vh;padding-top:1vh">
+        <div class="t-meta">LOOP · STAGES</div>
+        <ol style="list-style:none;display:flex;flex-direction:column;gap:2.4vh;padding:0;font-family:var(--sans),var(--sans-zh)">
+          <li style="display:grid;grid-template-columns:3em 1fr;gap:1.6vw;align-items:start">
+            <span style="font-family:var(--sans);font-weight:200;font-size:3.4vw;line-height:.9;color:var(--accent)">01</span>
+            <div>
+              <h4 style="font-weight:400;font-size:max(15px,1.3vw);margin-bottom:.6vh">Listen</h4>
+              <p style="font-weight:300;font-size:max(11px,.85vw);line-height:1.5;opacity:.7">客户通话录音全数转写</p>
+            </div>
+          </li>
+          <li style="display:grid;grid-template-columns:3em 1fr;gap:1.6vw;align-items:start">
+            <span style="font-family:var(--sans);font-weight:200;font-size:3.4vw;line-height:.9;color:var(--accent)">02</span>
+            <div>
+              <h4 style="font-weight:400;font-size:max(15px,1.3vw);margin-bottom:.6vh">Cluster</h4>
+              <p style="font-weight:300;font-size:max(11px,.85vw);line-height:1.5;opacity:.7">聚类出 7 个高频需求 shape</p>
+            </div>
+          </li>
+          <li style="display:grid;grid-template-columns:3em 1fr;gap:1.6vw;align-items:start">
+            <span style="font-family:var(--sans);font-weight:200;font-size:3.4vw;line-height:.9;color:var(--accent)">03</span>
+            <div>
+              <h4 style="font-weight:400;font-size:max(15px,1.3vw);margin-bottom:.6vh">Ship</h4>
+              <p style="font-weight:300;font-size:max(11px,.85vw);line-height:1.5;opacity:.7">每两周一次发布</p>
+            </div>
+          </li>
+          <li style="display:grid;grid-template-columns:3em 1fr;gap:1.6vw;align-items:start">
+            <span style="font-family:var(--sans);font-weight:200;font-size:3.4vw;line-height:.9;color:var(--accent)">04</span>
+            <div>
+              <h4 style="font-weight:400;font-size:max(15px,1.3vw);margin-bottom:.6vh">Measure</h4>
+              <p style="font-weight:300;font-size:max(11px,.85vw);line-height:1.5;opacity:.7">月度合并复盘</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;position:relative">
+        <svg viewBox="0 0 400 400" width="100%" style="max-width:36vw;position:relative">
+          <circle cx="200" cy="200" r="160" fill="none" stroke="var(--grey-2)" stroke-width="1" stroke-dasharray="4 4" opacity=".4"/>
+          <circle cx="200" cy="200" r="120" fill="none" stroke="var(--grey-2)" stroke-width="1" stroke-dasharray="4 4" opacity=".3"/>
+          <circle cx="200" cy="200" r="80" fill="none" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="360" cy="200" r="22" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="284" cy="360" r="22" fill="var(--paper)" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="116" cy="360" r="22" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="40" cy="200" r="22" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+          <path d="M338 200 L306 360" fill="none" stroke="var(--grey-3)" stroke-width="1" marker-end="url(#arr)"/>
+          <path d="M262 360 L138 360" fill="none" stroke="var(--grey-3)" stroke-width="1" marker-end="url(#arr)"/>
+          <path d="M94 360 L62 200" fill="none" stroke="var(--grey-3)" stroke-width="1" marker-end="url(#arr)"/>
+          <path d="M62 200 L338 200" fill="none" stroke="var(--grey-3)" stroke-width="1" marker-end="url(#arr)"/>
+          <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--grey-3)"/></marker></defs>
+        </svg>
+        <!-- HTML text overlay (lives outside SVG so validator passes) -->
+        <div style="position:absolute;inset:0;max-width:36vw;margin:auto;pointer-events:none">
+          <span style="position:absolute;left:90%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:13px;fill:var(--ink);color:var(--ink)">01</span>
+          <span style="position:absolute;left:71%;top:90%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:13px;color:var(--accent)">02</span>
+          <span style="position:absolute;left:29%;top:90%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:13px;color:var(--ink)">03</span>
+          <span style="position:absolute;left:10%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:13px;color:var(--ink)">04</span>
+          <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--sans);font-weight:200;font-size:44px;line-height:1;letter-spacing:-.04em;color:var(--ink)">LOOP</span>
+          <span style="position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--text-helper)">IMPROVE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S15 · Image Matrix + Hero Stat · 8 个客户 + 顶部 1 数字 ============ -->
+<section class="slide" data-layout="S15" data-animate="matrix-fill">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Customer Matrix · 8 客户 × 1 巨数</div>
+      <div class="r">S15 · 14 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:3vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">CUSTOMERS · Q3 · 8 LOGOS</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">8 个客户</h2>
+        <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(13px,.95vw);line-height:1.55;opacity:.72;max-width:48ch">每个客户都有专属的解决方案架构师跟单,这是 Q3 NRR 138% 的根本原因。</p>
+      </div>
+      <div class="matrix-fill" data-anim="up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.6vh;margin-top:auto">
+        <div class="matrix-cell card-fill" style="padding:2.6vh 1.6vw;display:flex;flex-direction:column;justify-content:space-between;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">01</span>
+          <h4 style="font-weight:500;font-size:max(14px,1vw);margin-top:auto">Helio Energy</h4>
+        </div>
+        <div class="matrix-cell card-fill" style="padding:2.6vh 1.6vw;display:flex;flex-direction:column;justify-content:space-between;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">02</span>
+          <h4 style="font-weight:500;font-size:max(14px,1vw);margin-top:auto">Marin Robotics</h4>
+        </div>
+        <div class="matrix-cell card-fill" style="padding:2.6vh 1.6vw;display:flex;flex-direction:column;justify-content:space-between;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">03</span>
+          <h4 style="font-weight:500;font-size:max(14px,1vw);margin-top:auto">Forge Logistics</h4>
+        </div>
+        <div class="matrix-cell card-fill" style="padding:2.6vh 1.6vw;display:flex;flex-direction:column;justify-content:space-between;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">04</span>
+          <h4 style="font-weight:500;font-size:max(14px,1vw);margin-top:auto">Astra Bio</h4>
+        </div>
+        <div class="matrix-cell card-fill" style="padding:2.6vh 1.6vw;display:flex;flex-direction:column;justify-content:space-between;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">05</span>
+          <h4 style="font-weight:500;font-size:max(14px,1vw);margin-top:auto">Kestrel Capital</h4>
+        </div>
+        <div class="matrix-cell card-fill" style="padding:2.6vh 1.6vw;display:flex;flex-direction:column;justify-content:space-between;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">06</span>
+          <h4 style="font-weight:500;font-size:max(14px,1vw);margin-top:auto">Vela Aerospace</h4>
+        </div>
+        <div class="matrix-cell card-fill" style="padding:2.6vh 1.6vw;display:flex;flex-direction:column;justify-content:space-between;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">07</span>
+          <h4 style="font-weight:500;font-size:max(14px,1vw);margin-top:auto">Lumen Retail</h4>
+        </div>
+        <div class="matrix-cell card-fill" style="padding:2.6vh 1.6vw;display:flex;flex-direction:column;justify-content:space-between;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">08</span>
+          <h4 style="font-weight:500;font-size:max(14px,1vw);margin-top:auto">Atlas Media</h4>
+        </div>
+      </div>
+      <div data-anim="hero" class="hero-stat-bottom" style="display:grid;grid-template-columns:auto 1fr;gap:3vw;align-items:end;border-top:1px solid var(--border-subtle);padding-top:2.4vh;margin-top:1vh">
+        <span class="num-mega" style="font-family:var(--sans);font-weight:200;font-size:min(12vw,18vh);line-height:.9;letter-spacing:-.04em">$41.2<small style="font-size:.32em;font-weight:400;opacity:.6;margin-left:.1em">M</small></span>
+        <div style="display:flex;flex-direction:column;gap:1vh;padding-bottom:1vh">
+          <div class="t-meta">Q3 ARR · UNOFFICIAL · YET</div>
+          <p style="font-weight:300;font-size:max(13px,1vw);line-height:1.55;opacity:.78;max-width:38ch">8 个 enterprise 客户,平均 ARR $4.6M,占 Q3 新增 ARR 的 72%。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S16 · Multi-card Brief · 6 个 tip 集合 ============ -->
+<section class="slide" data-layout="S16" data-animate="field-notes">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Field Notes · Q3 6 个 tip</div>
+      <div class="r">S16 · 15 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">TIPS · 06 FIELD NOTES</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">六条散记</h2>
+      </div>
+      <div class="brief-grid" data-anim="up" style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:1.6vw">
+        <div class="brief-card card-fill" style="padding:2.6vh 1.8vw;display:flex;flex-direction:column;gap:1vh;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">TIP 01</span>
+          <p style="font-weight:500;font-size:max(14px,1vw);line-height:1.45">不要在你的第一个 enterprise 上省钱。</p>
+          <span class="body-sm" style="margin-top:auto">SC + SE 是投资,不是成本。</span>
+        </div>
+        <div class="brief-card card-fill" style="padding:2.6vh 1.8vw;display:flex;flex-direction:column;gap:1vh;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">TIP 02</span>
+          <p style="font-weight:500;font-size:max(14px,1vw);line-height:1.45">每周听 5 通客户电话,不允许跳过。</p>
+          <span class="body-sm" style="margin-top:auto">PM 与 Sales 高管也包括。</span>
+        </div>
+        <div class="brief-card card-accent is-accent" style="padding:2.6vh 1.8vw;display:flex;flex-direction:column;gap:1vh;min-height:14vh">
+          <span class="t-meta">TIP 03 · 唯一强调</span>
+          <p style="font-weight:500;font-size:max(14px,1vw);line-height:1.45;color:var(--accent-on)">把每一次胜利写成 SOP,失败记成 retro。</p>
+          <span class="body-sm" style="margin-top:auto;color:var(--accent-on)">复利来自体系,不是灵感。</span>
+        </div>
+        <div class="brief-card card-fill" style="padding:2.6vh 1.8vw;display:flex;flex-direction:column;gap:1vh;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">TIP 04</span>
+          <p style="font-weight:500;font-size:max(14px,1vw);line-height:1.45">PLG 继续投资,不要因为 SDR 团队成功就停。</p>
+          <span class="body-sm" style="margin-top:auto">三轨并行,缺一不可。</span>
+        </div>
+        <div class="brief-card card-fill" style="padding:2.6vh 1.8vw;display:flex;flex-direction:column;gap:1vh;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">TIP 05</span>
+          <p style="font-weight:500;font-size:max(14px,1vw);line-height:1.45">CAC Payback 跑得越短越好,慢于 18 个月要追责。</p>
+          <span class="body-sm" style="margin-top:auto">效率的指标要硬。</span>
+        </div>
+        <div class="brief-card card-fill" style="padding:2.6vh 1.8vw;display:flex;flex-direction:column;gap:1vh;min-height:14vh">
+          <span class="t-meta" style="color:var(--accent)">TIP 06</span>
+          <p style="font-weight:500;font-size:max(14px,1vw);line-height:1.45">Logo Churn 是体力活 ── 让 CSM 时刻在场。</p>
+          <span class="body-sm" style="margin-top:auto">Q3 流失降到 0.8%。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S17 · System Diagram · 三层同心圆系统图 ============ -->
+<section class="slide" data-layout="S17" data-animate="system-diagram">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">System · 三层生态</div>
+      <div class="r">S17 · 16 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">ECOSYSTEM · 03 LAYERS</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">三层生态</h2>
+      </div>
+      <div class="system-diagram" data-anim="up" style="display:grid;grid-template-columns:1fr 1fr;gap:3vw;align-items:center">
+        <div style="position:relative;max-width:32vw">
+          <svg viewBox="0 0 400 400" width="100%">
+            <circle cx="200" cy="200" r="180" fill="var(--grey-1)"/>
+            <circle cx="200" cy="200" r="120" fill="var(--paper)" stroke="var(--grey-2)" stroke-width="1"/>
+            <circle cx="200" cy="200" r="60" fill="var(--ink)"/>
+          </svg>
+          <span style="position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);font-family:var(--sans);font-weight:200;font-size:22px;line-height:1;letter-spacing:.04em;color:var(--paper)">CORE</span>
+          <span style="position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:rgba(255,255,255,.78)">PLG</span>
+          <span style="position:absolute;left:15%;top:30%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--text-helper)">SMB</span>
+          <span style="position:absolute;left:85%;top:30%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--text-helper)">MID</span>
+          <span style="position:absolute;left:15%;top:73%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--text-helper)">ENT</span>
+          <span style="position:absolute;left:85%;top:73%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--text-helper)">EXPAND</span>
+          <span style="position:absolute;left:40%;top:9%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--accent)">OUTER · CHANNELS</span>
+          <span style="position:absolute;left:33%;top:45%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--text-secondary)">MIDDLE · OPS</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2.4vh">
+          <div>
+            <span class="t-meta" style="color:var(--accent)">CORE · INTERNAL</span>
+            <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(15px,1.3vw);line-height:1.55;max-width:36ch;margin-top:.8vh">产品、工程、CS、Data ── 每件事只有一个真相来源。</p>
+          </div>
+          <div>
+            <span class="t-meta" style="color:var(--accent)">MIDDLE · OPERATIONS</span>
+            <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(15px,1.3vw);line-height:1.55;max-width:36ch;margin-top:.8vh">SDR、AE、SC、SE ── 把客户从外圈接到内核。</p>
+          </div>
+          <div>
+            <span class="t-meta" style="color:var(--accent)">OUTER · CHANNELS</span>
+            <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(15px,1.3vw);line-height:1.55;max-width:36ch;margin-top:.8vh">SMB 自助、Mid SC 跟单、Ent Field、Expand ── 四种接触面。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S18 · Why Now · 三论点 + 数据支撑 ============ -->
+<section class="slide" data-layout="S18" data-animate="why-now">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Why Now · 为什么是 Q3</div>
+      <div class="r">S18 · 17 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">WHY NOW · 3 ARGUMENTS</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">为什么是现在</h2>
+      </div>
+      <div class="why-now-grid" data-anim="up" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2vw;align-items:end">
+        <div class="why-col" style="display:flex;flex-direction:column;gap:2vh;padding-bottom:2vh">
+          <div>
+            <span class="t-meta">ARGUMENT 01 · MARKET</span>
+            <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(2.4vw,4.4vh);line-height:1.1;letter-spacing:-.025em;margin-top:.6vh">市场慢,<br/>才显出资本效率</h3>
+            <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(13px,1vw);line-height:1.55;opacity:.78;margin-top:1.6vh;max-width:28ch">当所有人都在烧钱抢客户的时候,你能低 CAC 留住客户,就是护城河。</p>
+          </div>
+          <span class="why-num-bottom" style="font-family:var(--sans);font-weight:200;font-size:min(7vw,12vh);line-height:.85;letter-spacing:-.05em;color:var(--ink);margin-top:auto">62%</span>
+        </div>
+        <div class="why-col" style="display:flex;flex-direction:column;gap:2vh;padding-bottom:2vh">
+          <div>
+            <span class="t-meta">ARGUMENT 02 · PRODUCT</span>
+            <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(2.4vw,4.4vh);line-height:1.1;letter-spacing:-.025em;margin-top:.6vh">产品 PMF,<br/>早该开始了</h3>
+            <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(13px,1vw);line-height:1.55;opacity:.78;margin-top:1.6vh;max-width:28ch">企业级 SaaS 的 PMF 信号是 NRR,而我们做到了 138%,远超行业基准。</p>
+          </div>
+          <span class="why-num-bottom" style="font-family:var(--sans);font-weight:200;font-size:min(7vw,12vh);line-height:.85;letter-spacing:-.05em;color:var(--ink);margin-top:auto">138%</span>
+        </div>
+        <div class="why-col" style="display:flex;flex-direction:column;gap:2vh;padding-bottom:2vh">
+          <div>
+            <span class="t-meta">ARGUMENT 03 · TEAM · 强调</span>
+            <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(2.4vw,4.4vh);line-height:1.1;letter-spacing:-.025em;margin-top:.6vh;color:var(--accent)">团队成型,<br/>可以复制</h3>
+            <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(13px,1vw);line-height:1.55;opacity:.78;margin-top:1.6vh;max-width:28ch">SDR / AE / SC / SE 都已经过了第一个完整 90 天,流程可复盘可复用。</p>
+          </div>
+          <span class="why-num-bottom" style="font-family:var(--sans);font-weight:200;font-size:min(7vw,12vh);line-height:.85;letter-spacing:-.05em;color:var(--accent);margin-top:auto">11<small style="font-size:.4em;opacity:.6;margin-left:.05em">wk</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S19 · Four Cards · 四列均分卡 ============ -->
+<section class="slide" data-layout="S19" data-animate="four-cards">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Four Skills · Q3 团队四能力</div>
+      <div class="r">S19 · 18 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div style="height:1px;background:var(--accent);width:6vw;transform-origin:left"></div>
+        <div class="t-meta">FOUR SKILLS · 04 ABILITIES</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">Q3 的四种能力</h2>
+      </div>
+      <div class="four-cards" data-anim="up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:start">
+        <div class="fc-col" style="padding:3vh 1.8vw 0 0;border-top:2px solid currentColor">
+          <div class="t-meta" style="color:var(--text-helper)">— 01 / OUTREACH</div>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(15px,1.4vw);line-height:1.15;letter-spacing:-.01em;margin:1.6vh 0 1.4vh">冷开场</h3>
+          <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(11px,.85vw);line-height:1.5;opacity:.78">用客户原话写开场白,reply rate 从 4% 跳到 11%。</p>
+        </div>
+        <div class="fc-col" style="padding:3vh 1.8vw 0;border-top:2px solid currentColor;border-left:1px solid var(--border-subtle)">
+          <div class="t-meta" style="color:var(--text-helper)">— 02 / QUALIFY</div>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(15px,1.4vw);line-height:1.15;letter-spacing:-.01em;margin:1.6vh 0 1.4vh">资格判断</h3>
+          <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(11px,.85vw);line-height:1.5;opacity:.78">BANT + MEDDIC 双轨,缩短判断周期到 2 周。</p>
+        </div>
+        <div class="fc-col" style="padding:3vh 1.8vw 0;border-top:2px solid currentColor;border-left:1px solid var(--border-subtle)">
+          <div class="t-meta" style="color:var(--text-helper)">— 03 / CLOSE</div>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(15px,1.4vw);line-height:1.15;letter-spacing:-.01em;margin:1.6vh 0 1.4vh">签订</h3>
+          <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(11px,.85vw);line-height:1.5;opacity:.78">法律栈 24 小时出标准合同,把 cycle time 从 8 周压到 3 周。</p>
+        </div>
+        <div class="fc-col" style="padding:3vh 0 0 1.8vw;border-top:2px solid currentColor;border-left:1px solid var(--border-subtle)">
+          <div class="t-meta" style="color:var(--text-helper)">— 04 / EXPAND</div>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(15px,1.4vw);line-height:1.15;letter-spacing:-.01em;margin:1.6vh 0 1.4vh">横向扩张</h3>
+          <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(11px,.85vw);line-height:1.5;opacity:.78">从 BU1 推到 BU2,BU3 ── NRR 自然超过 130%。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S20 · Stacked KPI Ledger · 4-6 行账单式 KPI ============ -->
+<section class="slide" data-layout="S20" data-animate="stacked-ledger">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Ledger · Q3 6 行核心 KPI</div>
+      <div class="r">S20 · 19 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:4vh">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+        <div class="t-meta">LEDGER · 6 CORE NUMBERS</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1.04;letter-spacing:-.035em">Q3 核心账单</h2>
+      </div>
+      <div class="stacked-ledger" data-anim="ledger" style="display:flex;flex-direction:column">
+        <div class="ledger-row" style="display:grid;grid-template-columns:1fr auto 2fr auto;gap:3vw;align-items:baseline;padding:2.4vh 0;border-top:1px solid var(--border-subtle)">
+          <span class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(8vw,12vh);line-height:.85;letter-spacing:-.05em">$41.2M</span>
+          <span class="ledger-label t-meta">Q3 ARR</span>
+          <span class="body-sm" style="opacity:.7">环比 +41%,破历史记录</span>
+          <i data-lucide="trending-up" style="width:1.6vw;height:1.6vw;stroke:var(--accent)"></i>
+        </div>
+        <div class="ledger-row" style="display:grid;grid-template-columns:1fr auto 2fr auto;gap:3vw;align-items:baseline;padding:2.4vh 0;border-top:1px solid var(--border-subtle)">
+          <span class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(8vw,12vh);line-height:.85;letter-spacing:-.05em">138%</span>
+          <span class="ledger-label t-meta">Enterprise NRR</span>
+          <span class="body-sm" style="opacity:.7">高于 120% 警戒线</span>
+          <i data-lucide="anchor" style="width:1.6vw;height:1.6vw;stroke:var(--accent)"></i>
+        </div>
+        <div class="ledger-row" style="display:grid;grid-template-columns:1fr auto 2fr auto;gap:3vw;align-items:baseline;padding:2.4vh 0;border-top:1px solid var(--border-subtle)">
+          <span class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(8vw,12vh);line-height:.85;letter-spacing:-.05em">11.4<small style="font-size:.32em;opacity:.6;margin-left:.1em">mo</small></span>
+          <span class="ledger-label t-meta">CAC Payback</span>
+          <span class="body-sm" style="opacity:.7">比 Q1 缩短 4 个月</span>
+          <i data-lucide="clock" style="width:1.6vw;height:1.6vw;stroke:var(--accent)"></i>
+        </div>
+        <div class="ledger-row" style="display:grid;grid-template-columns:1fr auto 2fr auto;gap:3vw;align-items:baseline;padding:2.4vh 0;border-top:1px solid var(--border-subtle)">
+          <span class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(8vw,12vh);line-height:.85;letter-spacing:-.05em">0.8%</span>
+          <span class="ledger-label t-meta">Logo Churn</span>
+          <span class="body-sm" style="opacity:.7">11 个月最低</span>
+          <i data-lucide="shield" style="width:1.6vw;height:1.6vw;stroke:var(--accent)"></i>
+        </div>
+        <div class="ledger-row" style="display:grid;grid-template-columns:1fr auto 2fr auto;gap:3vw;align-items:baseline;padding:2.4vh 0;border-top:1px solid var(--border-subtle)">
+          <span class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(8vw,12vh);line-height:.85;letter-spacing:-.05em">42</span>
+          <span class="ledger-label t-meta">New Logos</span>
+          <span class="body-sm" style="opacity:.7">17 个 enterprise,25 个 mid-market</span>
+          <i data-lucide="user-plus" style="width:1.6vw;height:1.6vw;stroke:var(--accent)"></i>
+        </div>
+        <div class="ledger-row" style="display:grid;grid-template-columns:1fr auto 2fr auto;gap:3vw;align-items:baseline;padding:2.4vh 0;border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)">
+          <span class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(8vw,12vh);line-height:.85;letter-spacing:-.05em">$28M</span>
+          <span class="ledger-label t-meta">Q4 Pipeline</span>
+          <span class="body-sm" style="opacity:.7">3 个 ARR $1M+ 在签</span>
+          <i data-lucide="package" style="width:1.6vw;height:1.6vw;stroke:var(--accent)"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S21 · Tech Spec Sheet · 规格说明书 ============ -->
+<section class="slide" data-layout="S21" data-animate="tech-spec">
+  <div class="canvas-card">
+    <header class="chrome-min">
+      <div class="l">Tech Spec · Q3 产品规约</div>
+      <div class="r">S21 · 20 / NN</div>
+    </header>
+    <div style="flex:1;padding:0;display:grid;grid-template-columns:8fr 8fr;gap:3vw">
+      <div data-anim="up" style="display:flex;flex-direction:column;gap:2vh;align-self:start">
+        <div class="t-meta">SPEC · Q3 SHIPMENT</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.6vw,10.2vh);line-height:1;letter-spacing:-.045em">v4.2<br/>v4.3<br/>v4.4<br/>v5.0</h2>
+        <p style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(13px,1vw);line-height:1.55;opacity:.78;max-width:36ch">每周一次发布,Q3 共发布了 12 个版本。最重要的两个: v4.3 加了 audit log,v5.0 重写了计费模型。</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:2vh;padding-top:1vh">
+        <div data-anim="up" style="display:flex;flex-direction:column;gap:1vh">
+          <span class="t-meta">— METRIC 01</span>
+          <div style="height:1px;background:var(--ink);width:100%"></div>
+          <span style="font-family:var(--sans);font-weight:200;font-size:min(3.2vw,6vh);line-height:1;letter-spacing:-.04em">99.97%</span>
+          <p class="body-sm">月可用率,从 99.6% 跳到 99.97%</p>
+        </div>
+        <div data-anim="up" style="display:flex;flex-direction:column;gap:1vh">
+          <span class="t-meta">— METRIC 02</span>
+          <div style="height:1px;background:var(--ink);width:100%"></div>
+          <span style="font-family:var(--sans);font-weight:200;font-size:min(3.2vw,6vh);line-height:1;letter-spacing:-.04em">114<small style="font-size:.32em;opacity:.6;margin-left:.1em">ms</small></span>
+          <p class="body-sm">P95 延迟从 320ms 降到 114ms</p>
+        </div>
+        <div data-anim="up" style="display:flex;flex-direction:column;gap:1vh">
+          <span class="t-meta">— METRIC 03</span>
+          <div style="height:1px;background:var(--ink);width:100%"></div>
+          <span style="font-family:var(--sans);font-weight:200;font-size:min(3.2vw,6vh);line-height:1;letter-spacing:-.04em">12<small style="font-size:.32em;opacity:.6;margin-left:.1em">×</small></span>
+          <p class="body-sm">QPS 处理能力提升 12 倍</p>
+        </div>
+        <div data-anim="hero" style="margin-top:auto;display:grid;grid-template-columns:1fr auto;gap:2vw;align-items:end;border-top:1px solid var(--border-subtle);padding-top:2vh">
+          <span style="font-family:var(--sans);font-weight:200;font-size:min(8vw,12vh);line-height:.85;letter-spacing:-.045em">3.4<small style="font-size:.32em;opacity:.6;margin-left:.1em">hours</small></span>
+          <div style="display:flex;flex-direction:column;gap:.5vh;text-align:right">
+            <span class="t-meta">Q3 DEPLOY MTBF</span>
+            <span class="t-meta">Goal · &lt; 4h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-anim="bars" style="position:absolute;right:5vw;bottom:5vh;display:flex;gap:.4vw;align-items:end;height:14vh">
+      <span class="vbar" style="display:block;width:.4vw;background:var(--grey-2);height:30%"></span>
+      <span class="vbar" style="display:block;width:.4vw;background:var(--grey-2);height:50%"></span>
+      <span class="vbar" style="display:block;width:.4vw;background:var(--grey-2);height:75%"></span>
+      <span class="vbar" style="display:block;width:.4vw;background:var(--accent);height:100%"></span>
+      <span class="vbar" style="display:block;width:.4vw;background:var(--grey-2);height:85%"></span>
+      <span class="vbar" style="display:block;width:.4vw;background:var(--grey-2);height:40%"></span>
+      <span class="vbar" style="display:block;width:.4vw;background:var(--grey-2);height:60%"></span>
+      <span class="vbar" style="display:block;width:.4vw;background:var(--accent);height:90%"></span>
+      <span class="vbar" style="display:block;width:.4vw;background:var(--grey-2);height:55%"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S22 · Image Hero · 顶部全宽图 + 左上白块标题 + 三 KPI ============ -->
+<section class="slide light" data-layout="S22" data-animate="image-hero">
+  <div class="canvas-card" style="padding:0;display:flex;flex-direction:column;overflow:hidden">
+    <div data-anim="img" style="position:relative;flex:0 0 60%;overflow:hidden;background:var(--grey-1)">
+      <img src="images/q3-product-hero.png" data-image-slot="s22-hero-21x9" alt="NorthStar Dashboard · Q3" loading="eager"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%">
+      <div class="chrome-min" style="position:absolute;top:0;left:0;right:0;color:rgba(255,255,255,.9);padding:5.6vh 5vw 0">
+        <div class="l">Section · Q3 Product Hero</div>
+        <div class="r">S22 · 21 / NN</div>
+      </div>
+      <div data-anim="title-block" style="position:absolute;left:5vw;top:11vh;background:var(--paper);padding:3.2vh 3.2vw;max-width:40vw">
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.2vw,9vh);line-height:1;letter-spacing:-.035em;color:var(--text-primary)">
+          Q3<br>Dashboard
+        </div>
+      </div>
+    </div>
+    <div data-anim="kpi" class="image-hero-body">
+      <div style="max-width:48ch;font-family:var(--sans),var(--sans-zh);font-size:max(15px,1.3vw);line-height:1.55;font-weight:300;color:var(--text-primary);letter-spacing:-.005em">
+        Q3 的产品视图:每个客户都看得到自己的 NRR, retention rate, expand potential。SDR 与 AE 在同一个界面工作。
+      </div>
+      <div class="image-hero-stats" style="gap:4vw">
+        <div style="display:flex;flex-direction:column;gap:.6vh">
+          <div style="height:1px;background:var(--ink)"></div>
+          <div class="t-meta">Q3 ARR</div>
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.95;letter-spacing:-.04em">$41.2<small style="font-size:.4em;opacity:.6;margin-left:.1em">M</small></div>
+          <div style="height:1px;background:var(--border-subtle);margin-top:auto"></div>
+          <p class="body-sm">Q3 总 ARR</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.6vh">
+          <div style="height:1px;background:var(--ink)"></div>
+          <div class="t-meta">Q3 GROWTH</div>
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.95;letter-spacing:-.04em">+41<small style="font-size:.4em;opacity:.6;margin-left:.1em">%</small></div>
+          <div style="height:1px;background:var(--border-subtle);margin-top:auto"></div>
+          <p class="body-sm">环比增长</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.6vh">
+          <div style="height:1px;background:var(--ink)"></div>
+          <div class="t-meta">Q3 NRR</div>
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,7.6vh);line-height:.95;letter-spacing:-.04em;color:var(--accent)">138<small style="font-size:.4em;opacity:.6;margin-left:.1em">%</small></div>
+          <div style="height:1px;background:var(--border-subtle);margin-top:auto"></div>
+          <p class="body-sm">Enterprise 段 NRR</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Closing · Manifesto + Takeaways · IKB 闭环 ============ -->
+<section class="slide split" data-layout="SWISS-CLOSING-ASCII" data-animate="split-statement">
+  <div class="canvas-card">
+    <div class="split-half">
+      <div class="half b-accent" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between;position:relative;overflow:hidden">
+        <canvas class="ascii-bg" aria-hidden="true"></canvas>
+        <div class="chrome-min" style="margin-bottom:0;position:relative;z-index:1">
+          <div class="l">22 / 22</div>
+          <div class="r">CLOSING</div>
+        </div>
+        <div data-anim="manifesto" style="display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
+          <div class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em;margin-bottom:1.6vh">MANIFESTO · Q3</div>
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-size:min(8vw,14vh);line-height:.94;letter-spacing:-.025em;font-weight:200;color:#fff">Build a <span style="font-style:italic;font-weight:300">thin</span> harness.<br/>Write <span style="font-style:italic;font-weight:300">fat</span> skills.</h2>
+          <div style="font-family:var(--sans),var(--sans-zh);font-size:max(13px,1vw);line-height:1.6;color:rgba(255,255,255,.82);font-weight:300;max-width:36ch;margin-top:1.4vh">把每一次胜利写下来,把每一次失败记成 SOP。</div>
+        </div>
+        <div data-anim="signature" style="display:flex;justify-content:space-between;align-items:end;border-top:1px solid rgba(255,255,255,.22);padding-top:2vh;position:relative;z-index:1">
+          <div class="t-meta" style="color:rgba(255,255,255,.62)">歸藏 · NorthStar · Q3 复盘</div>
+          <div class="t-meta" style="color:rgba(255,255,255,.62)">2026.10.07</div>
+        </div>
+      </div>
       <div class="half" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between">
         <div class="chrome-min">
           <div class="l">TAKEAWAYS</div>
           <div class="r">03 RULES</div>
         </div>
-
         <div data-anim="rules" style="display:flex;flex-direction:column;gap:0">
           <div style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.6vh 0;border-top:1px solid var(--border-subtle)">
             <div style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--text-primary)">01</div>
             <div>
-              <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--text-primary);margin-bottom:1vh">[必填] takeaway 标题 01</h3>
-              <p style="font-family:var(--sans),var(--sans-zh);font-size:max(12px,.92vw);line-height:1.6;color:var(--text-secondary);font-weight:300">[必填] 1-2 行展开说明.</p>
+              <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--text-primary);margin-bottom:1vh">Hybrid > Single-channel</h3>
+              <p style="font-family:var(--sans),var(--sans-zh);font-size:max(12px,.92vw);line-height:1.6;color:var(--text-secondary);font-weight:300">PLG 与 Sales 不矛盾。每段客户形状配一支团队 ── SMB 给自助,Mid 给 SC,Ent 给 Field。</p>
             </div>
           </div>
           <div style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.6vh 0;border-top:1px solid var(--border-subtle)">
             <div style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--text-primary)">02</div>
             <div>
-              <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--text-primary);margin-bottom:1vh">[必填] takeaway 标题 02</h3>
-              <p style="font-family:var(--sans),var(--sans-zh);font-size:max(12px,.92vw);line-height:1.6;color:var(--text-secondary);font-weight:300">[必填] 1-2 行展开说明.</p>
+              <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--text-primary);margin-bottom:1vh">Fits > Funnels</h3>
+              <p style="font-family:var(--sans),var(--sans-zh);font-size:max(12px,.92vw);line-height:1.6;color:var(--text-secondary);font-weight:300">客户不是在漏斗里滑落 ── 客户是在地图上行走。你的工作是 fit,而非 funnel。</p>
             </div>
           </div>
           <div style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.6vh 0;border-top:1px solid var(--border-subtle);border-bottom:2px solid var(--accent)">
             <div style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--accent)">03</div>
             <div>
-              <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--accent);margin-bottom:1vh">[必填] takeaway 标题 03 · accent 强调</h3>
-              <p style="font-family:var(--sans),var(--sans-zh);font-size:max(12px,.92vw);line-height:1.6;color:var(--text-secondary);font-weight:300">[必填] 最后一条用 IKB 强调,与封面色彩首尾闭环.</p>
+              <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--accent);margin-bottom:1vh">Codify > Imitate</h3>
+              <p style="font-family:var(--sans),var(--sans-zh);font-size:max(12px,.92vw);line-height:1.6;color:var(--text-secondary);font-weight:300">别再去模仿别人做对的事。把每一个 metric 配上一个团队,把每一个胜利写下来。</p>
             </div>
           </div>
         </div>
-
-        <div data-anim="foot" class="t-meta" style="color:var(--text-helper);text-align:right">→ 完 · END OF FIELD NOTE</div>
+        <div data-anim="foot" class="t-meta" style="color:var(--text-helper);text-align:right">→ 完 · END OF Q3 FIELD NOTE</div>
       </div>
     </div>
   </div>
