@@ -2,15 +2,15 @@
 import { existsSync } from 'node:fs';
 
 let puppeteer;
-const fallbackPuppeteerPath = '/Users/af/cpro01/ksaclaude01/tatori01/template-render-engine/node_modules/puppeteer-core/lib/esm/puppeteer/puppeteer-core.js';
+const fallbackPuppeteerPath = process.env.PUPPETEER_CORE_PATH;
 
 try {
   ({ default: puppeteer } = await import('puppeteer-core'));
 } catch (error) {
-  if (existsSync(fallbackPuppeteerPath)) {
+  if (fallbackPuppeteerPath && existsSync(fallbackPuppeteerPath)) {
     ({ default: puppeteer } = await import(fallbackPuppeteerPath));
   } else {
-    console.error('Failed to load puppeteer-core. Install puppeteer-core or set fallback module path.');
+    console.error('Failed to load puppeteer-core. Install puppeteer-core or set PUPPETEER_CORE_PATH.');
     console.error(error.message);
     process.exit(1);
   }

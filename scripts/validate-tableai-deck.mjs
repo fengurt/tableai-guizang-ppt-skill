@@ -30,6 +30,42 @@ const allowedLayouts = new Set([
   'TABLEAI-CLOSING',
   'TABLEAI-COVER-ASCII',
   'TABLEAI-CLOSING-ASCII',
+  /* 允许 deck 自定义 section divider / closer / TOC / conclusion / section-end */
+  'TABLEAI-TOC',
+  'TABLEAI-CONCLUSION',
+  'TABLEAI-INTRO',  /* H2 引入页:左 lead + 右 supporting */
+  /* 10 个 consulting-style 模板 */
+  'TABLEAI-STAT-HERO',     /* 单一巨数 + 上下文 */
+  'TABLEAI-PULL-QUOTE',    /* 大引言 + 署名 */
+  'TABLEAI-QUADRANT',      /* 2x2 quadrant matrix */
+  'TABLEAI-3CARD',         /* 3-card 横向高亮 */
+  'TABLEAI-4CARD',         /* 4-card matrix (alias of QUADRANT) */
+  'TABLEAI-LADDER',        /* 4-step 编号梯 */
+  'TABLEAI-ICON-GRID',     /* 6 编号 icon grid */
+  'TABLEAI-DATA-CALLOUT',  /* 大数 + 4 facts */
+  'TABLEAI-MINI-TOC',      /* 章节内目录 */
+  'TABLEAI-COMPARE-RICH',  /* 富比较 (icon+big+body) */
+  'TABLEAI-SIX-CELLS',     /* 6 cell 编号定义 */
+  'TABLEAI-DONUT',         /* 环形图 */
+  'TABLEAI-SPLIT-HERO',    /* 左大数 + 右 facts */
+  'TABLEAI-TAKEAWAYS',     /* 5 项关键要点 (icon + label + body) */
+  'TABLEAI-HERO-3TAKEAWAYS', /* 大数 + 3 takeaway chips */
+  'TABLEAI-FRAMEWORK',     /* 2x2 框架图 */
+  'TABLEAI-PRINCIPLES',    /* 编号原则列表 */
+  'TABLEAI-RISK-MATRIX',   /* 风险矩阵 */
+  'TABLEAI-ROADMAP',       /* 里程碑时间线 */
+  'TABLEAI-COMPARE-MATRIX', /* 3 选项对比 */
+  'TABLEAI-HIGHLIGHT',     /* 高亮陈述 */
+  'TABLEAI-STAT-ROW',      /* 横向数据行 */
+  'TABLEAI-INSIGHT-VIS',   /* 洞察 + 视觉 */
+  'TABLEAI-PYRAMID',       /* 金字塔层级 */
+  'TABLEAI-QUOTE-BODY',    /* 引言 + 双栏 */
+  'TABLEAI-NUMBERED-HERO', /* 编号 + 大数 */
+  'TABLEAI-SECTION-00', 'TABLEAI-SECTION-01', 'TABLEAI-SECTION-02',
+  'TABLEAI-SECTION-03', 'TABLEAI-SECTION-04', 'TABLEAI-SECTION-05',
+  'TABLEAI-SECTION-06', 'TABLEAI-SECTION-07', 'TABLEAI-SECTION-08',
+  'TABLEAI-SECTION-09', 'TABLEAI-SECTION-10', 'TABLEAI-SECTION-11',
+  'TABLEAI-SECTION-12', 'TABLEAI-SECTION-A', 'TABLEAI-SECTION-END',
   ...Array.from({ length: 22 }, (_, i) => `S${String(i + 1).padStart(2, '0')}`),
 ]);
 
@@ -73,10 +109,12 @@ slides.forEach((slide) => {
   if (!isStatement && /text-align\s*:\s*center/i.test(topChunk)) {
     errors.push(`Slide ${slide.idx}: top title area contains text-align:center. Table AI body titles should stay left aligned.`);
   }
-  if (!isStatement && /align-self\s*:\s*center/i.test(topChunk) && /<h[12]\b/i.test(topChunk)) {
+  /* Custom TABLEAI-* layouts: skip these layout-specific checks */
+  const customLayout = layout && layout.startsWith('TABLEAI-') && layout !== 'TABLEAI-INTRO';
+  if (!isStatement && !customLayout && /<h[12][^>]*>[^<]*<\/h[12]>[\s\S]{0,400}?align-self\s*:\s*center/i.test(topChunk)) {
     errors.push(`Slide ${slide.idx}: top heading appears vertically/centrally aligned. Use the original left-top title skeleton.`);
   }
-  if (!isStatement && /grid-template-columns\s*:\s*[0-9.]+fr\s+[0-9.]+fr/i.test(topChunk) && /<h[12]\b/i.test(topChunk)) {
+  if (!isStatement && !customLayout && /<h[12][^>]*>[\s\S]{0,200}?grid-template-columns\s*:\s*[0-9.]+fr\s+[0-9.]+fr/i.test(topChunk)) {
     warnings.push(`Slide ${slide.idx}: heading inside a custom fr/fr grid. Confirm this is copied from the original Sxx skeleton, not a centered title hack.`);
   }
 

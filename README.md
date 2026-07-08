@@ -9,6 +9,8 @@
 [![由真格 Token Grant 资助](https://img.shields.io/static/v1?label=%E7%94%B1%E7%9C%9F%E6%A0%BC%20Token%20Grant&message=%E8%B5%84%E5%8A%A9&color=FF4D00&style=flat-square)](https://zhenfund.feishu.cn/share/base/form/shrcn1lAANF659o7EpWnxlR1VOh?sessionid=)
 
 > 🌏 **English version: [README.en.md](./README.en.md)**
+>
+> 📍 **入口文件**:打开 [`INDEX.html`](./INDEX.html) 查看三种风格的对比与 30 秒上手指南。模板文件:`assets/template.html` (Style A) · `assets/template-swiss.html` (Style B) · `assets/template-tableai.html` (Style C)。
 
 一个适配 Claude Code / Codex 等 Agent 环境的网页 PPT 技能,用于生成**单文件 HTML 横向翻页 PPT**、PPT 配图和多平台封面。
 

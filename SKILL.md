@@ -1,6 +1,7 @@
 ---
 name: guizang-ppt-skill
 description: 生成横向翻页网页 PPT（单 HTML 文件），含 WebGL 背景、章节幕封、数据大字报、图片网格等模板。提供三种风格：① "电子杂志 × 电子墨水"（衬线 + 流体背景 + 暖色） ② "瑞士国际主义"（无衬线 + 网格点阵 + IKB/柠檬黄/柠檬绿/安全橙高亮） ③ "Table AI Design System"（深蓝 + 暗金 + Manrope + 微圆角,Style B 的品牌化 fork）。当用户需要制作分享 / 演讲 / 发布会风格的网页 PPT，或提到"杂志风 PPT"、"瑞士风 PPT"、"Swiss Style"、"Table AI"、"horizontal swipe deck"时使用。
+homepage: INDEX.html
 ---
 
 # Magazine Web Ppt
@@ -467,6 +468,8 @@ guizang-ppt-skill/
     ├── image-prompts.md      ← GPT-M 2.0 配图类型、比例和基础提示词
     ├── screenshot-framing.md ← CleanShot X 式截图适配语义 + 内置背景资产映射
     └── checklist.md          ← 质量检查清单（P0/P1/P2/P3 分级）
+
+INDEX.html                   ← 项目入口:三风格对比 + 30 秒上手 + 校验器状态
 ```
 
 ```text
